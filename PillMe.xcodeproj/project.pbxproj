@@ -11,6 +11,41 @@
 		9BF7EE2C284E6E750060D66B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BF7EE2B284E6E750060D66B /* ContentView.swift */; };
 		9BF7EE2E284E6E760060D66B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9BF7EE2D284E6E760060D66B /* Assets.xcassets */; };
 		9BF7EE31284E6E760060D66B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9BF7EE30284E6E760060D66B /* Preview Assets.xcassets */; };
+		9BF7EE86284E6F930060D66B /* FriendInfoManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BF7EE85284E6F930060D66B /* FriendInfoManager.swift */; };
+		9BF7EE88284E6FB80060D66B /* FriendView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BF7EE87284E6FB80060D66B /* FriendView.swift */; };
+		9BF7EE8A284E6FCF0060D66B /* AddFriendManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BF7EE89284E6FCF0060D66B /* AddFriendManager.swift */; };
+		9BF7EE8C284E6FE30060D66B /* FriendManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BF7EE8B284E6FE30060D66B /* FriendManager.swift */; };
+		9BF7EE8E284E6FF40060D66B /* FriendListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BF7EE8D284E6FF40060D66B /* FriendListModel.swift */; };
+		9BF7EE90284E700D0060D66B /* ForgotPasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BF7EE8F284E700D0060D66B /* ForgotPasswordView.swift */; };
+		9BF7EE92284E70200060D66B /* passwordManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BF7EE91284E70200060D66B /* passwordManager.swift */; };
+		9BF7EE94284E70440060D66B /*  AddPillView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BF7EE93284E70440060D66B /*  AddPillView.swift */; };
+		9BF7EE96284E70590060D66B /* AddPillManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BF7EE95284E70590060D66B /* AddPillManager.swift */; };
+		9BF7EE98284E706B0060D66B /* PillSearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BF7EE97284E706B0060D66B /* PillSearchView.swift */; };
+		9BF7EE9A284E709C0060D66B /* searchPillInfoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BF7EE99284E709C0060D66B /* searchPillInfoModel.swift */; };
+		9BF7EE9C284E70AF0060D66B /* SearchBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BF7EE9B284E70AF0060D66B /* SearchBarView.swift */; };
+		9BF7EEA0284E71100060D66B /* PillModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BF7EE9F284E71100060D66B /* PillModel.swift */; };
+		9BF7EEA2284E71230060D66B /* PillManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BF7EEA1284E71230060D66B /* PillManager.swift */; };
+		9BF7EEA4284E71370060D66B /* PillInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BF7EEA3284E71370060D66B /* PillInfoView.swift */; };
+		9BF7EEA6284E71730060D66B /* mainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BF7EEA5284E71730060D66B /* mainView.swift */; };
+		9BF7EEA8284E71870060D66B /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BF7EEA7284E71870060D66B /* LoginView.swift */; };
+		9BF7EEAA284E71990060D66B /* SignupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BF7EEA9284E71990060D66B /* SignupView.swift */; };
+		9BF7EEAC284E71AE0060D66B /* IdCheckManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BF7EEAB284E71AE0060D66B /* IdCheckManager.swift */; };
+		9BF7EEAE284E71CA0060D66B /* SignupManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BF7EEAD284E71CA0060D66B /* SignupManager.swift */; };
+		9BF7EEB0284E721D0060D66B /* TabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BF7EEAF284E721D0060D66B /* TabView.swift */; };
+		9BF7EEB2284E72360060D66B /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BF7EEB1284E72360060D66B /* ProfileView.swift */; };
+		9BF7EEB4284E72BF0060D66B /* FiendInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BF7EEB3284E72BF0060D66B /* FiendInfoView.swift */; };
+		9BF7EEB6284E72D10060D66B /* AddTimeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BF7EEB5284E72D10060D66B /* AddTimeManager.swift */; };
+		9BF7EEB8284E72EA0060D66B /* CalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BF7EEB7284E72EA0060D66B /* CalendarView.swift */; };
+		9BF7EEBA284E730B0060D66B /* TakeCheckManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BF7EEB9284E730B0060D66B /* TakeCheckManager.swift */; };
+		9BF7EEBC284E73290060D66B /* PillTakeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BF7EEBB284E73290060D66B /* PillTakeModel.swift */; };
+		9BF7EEBE284E73450060D66B /* pillTimeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BF7EEBD284E73450060D66B /* pillTimeModel.swift */; };
+		9BF7EEC0284E73E60060D66B /* TestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BF7EEBF284E73E60060D66B /* TestView.swift */; };
+		9BF7EEC2284E73FE0060D66B /* LoginManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BF7EEC1284E73FE0060D66B /* LoginManager.swift */; };
+		9BF7EEC4284E740C0060D66B /* userModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BF7EEC3284E740C0060D66B /* userModel.swift */; };
+		9BF7EEC6284E741A0060D66B /* getCurrentTimeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BF7EEC5284E741A0060D66B /* getCurrentTimeManager.swift */; };
+		9BF7EEC8284E74270060D66B /* SelectTimeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BF7EEC7284E74270060D66B /* SelectTimeManager.swift */; };
+		9BF7EECA284E74350060D66B /* SearchPillInfoManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BF7EEC9284E74350060D66B /* SearchPillInfoManager.swift */; };
+		9BF7EECC284E74480060D66B /* PillDeleteManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BF7EECB284E74480060D66B /* PillDeleteManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +54,41 @@
 		9BF7EE2B284E6E750060D66B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		9BF7EE2D284E6E760060D66B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9BF7EE30284E6E760060D66B /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		9BF7EE85284E6F930060D66B /* FriendInfoManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendInfoManager.swift; sourceTree = "<group>"; };
+		9BF7EE87284E6FB80060D66B /* FriendView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendView.swift; sourceTree = "<group>"; };
+		9BF7EE89284E6FCF0060D66B /* AddFriendManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddFriendManager.swift; sourceTree = "<group>"; };
+		9BF7EE8B284E6FE30060D66B /* FriendManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendManager.swift; sourceTree = "<group>"; };
+		9BF7EE8D284E6FF40060D66B /* FriendListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendListModel.swift; sourceTree = "<group>"; };
+		9BF7EE8F284E700D0060D66B /* ForgotPasswordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordView.swift; sourceTree = "<group>"; };
+		9BF7EE91284E70200060D66B /* passwordManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = passwordManager.swift; sourceTree = "<group>"; };
+		9BF7EE93284E70440060D66B /*  AddPillView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = " AddPillView.swift"; sourceTree = "<group>"; };
+		9BF7EE95284E70590060D66B /* AddPillManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPillManager.swift; sourceTree = "<group>"; };
+		9BF7EE97284E706B0060D66B /* PillSearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PillSearchView.swift; sourceTree = "<group>"; };
+		9BF7EE99284E709C0060D66B /* searchPillInfoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = searchPillInfoModel.swift; sourceTree = "<group>"; };
+		9BF7EE9B284E70AF0060D66B /* SearchBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBarView.swift; sourceTree = "<group>"; };
+		9BF7EE9F284E71100060D66B /* PillModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PillModel.swift; sourceTree = "<group>"; };
+		9BF7EEA1284E71230060D66B /* PillManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PillManager.swift; sourceTree = "<group>"; };
+		9BF7EEA3284E71370060D66B /* PillInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PillInfoView.swift; sourceTree = "<group>"; };
+		9BF7EEA5284E71730060D66B /* mainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mainView.swift; sourceTree = "<group>"; };
+		9BF7EEA7284E71870060D66B /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		9BF7EEA9284E71990060D66B /* SignupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupView.swift; sourceTree = "<group>"; };
+		9BF7EEAB284E71AE0060D66B /* IdCheckManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IdCheckManager.swift; sourceTree = "<group>"; };
+		9BF7EEAD284E71CA0060D66B /* SignupManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupManager.swift; sourceTree = "<group>"; };
+		9BF7EEAF284E721D0060D66B /* TabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabView.swift; sourceTree = "<group>"; };
+		9BF7EEB1284E72360060D66B /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		9BF7EEB3284E72BF0060D66B /* FiendInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FiendInfoView.swift; sourceTree = "<group>"; };
+		9BF7EEB5284E72D10060D66B /* AddTimeManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTimeManager.swift; sourceTree = "<group>"; };
+		9BF7EEB7284E72EA0060D66B /* CalendarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarView.swift; sourceTree = "<group>"; };
+		9BF7EEB9284E730B0060D66B /* TakeCheckManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TakeCheckManager.swift; sourceTree = "<group>"; };
+		9BF7EEBB284E73290060D66B /* PillTakeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PillTakeModel.swift; sourceTree = "<group>"; };
+		9BF7EEBD284E73450060D66B /* pillTimeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = pillTimeModel.swift; sourceTree = "<group>"; };
+		9BF7EEBF284E73E60060D66B /* TestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestView.swift; sourceTree = "<group>"; };
+		9BF7EEC1284E73FE0060D66B /* LoginManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginManager.swift; sourceTree = "<group>"; };
+		9BF7EEC3284E740C0060D66B /* userModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = userModel.swift; sourceTree = "<group>"; };
+		9BF7EEC5284E741A0060D66B /* getCurrentTimeManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = getCurrentTimeManager.swift; sourceTree = "<group>"; };
+		9BF7EEC7284E74270060D66B /* SelectTimeManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectTimeManager.swift; sourceTree = "<group>"; };
+		9BF7EEC9284E74350060D66B /* SearchPillInfoManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchPillInfoManager.swift; sourceTree = "<group>"; };
+		9BF7EECB284E74480060D66B /* PillDeleteManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PillDeleteManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,7 +122,42 @@
 			isa = PBXGroup;
 			children = (
 				9BF7EE29284E6E750060D66B /* PillMeApp.swift */,
+				9BF7EE85284E6F930060D66B /* FriendInfoManager.swift */,
+				9BF7EE87284E6FB80060D66B /* FriendView.swift */,
+				9BF7EE89284E6FCF0060D66B /* AddFriendManager.swift */,
+				9BF7EE8B284E6FE30060D66B /* FriendManager.swift */,
+				9BF7EE8D284E6FF40060D66B /* FriendListModel.swift */,
+				9BF7EE8F284E700D0060D66B /* ForgotPasswordView.swift */,
+				9BF7EE91284E70200060D66B /* passwordManager.swift */,
+				9BF7EE93284E70440060D66B /*  AddPillView.swift */,
+				9BF7EE95284E70590060D66B /* AddPillManager.swift */,
+				9BF7EE97284E706B0060D66B /* PillSearchView.swift */,
+				9BF7EE99284E709C0060D66B /* searchPillInfoModel.swift */,
+				9BF7EE9B284E70AF0060D66B /* SearchBarView.swift */,
 				9BF7EE2B284E6E750060D66B /* ContentView.swift */,
+				9BF7EE9F284E71100060D66B /* PillModel.swift */,
+				9BF7EEA1284E71230060D66B /* PillManager.swift */,
+				9BF7EEA3284E71370060D66B /* PillInfoView.swift */,
+				9BF7EEA5284E71730060D66B /* mainView.swift */,
+				9BF7EEA7284E71870060D66B /* LoginView.swift */,
+				9BF7EEA9284E71990060D66B /* SignupView.swift */,
+				9BF7EEAB284E71AE0060D66B /* IdCheckManager.swift */,
+				9BF7EEAD284E71CA0060D66B /* SignupManager.swift */,
+				9BF7EEAF284E721D0060D66B /* TabView.swift */,
+				9BF7EEB1284E72360060D66B /* ProfileView.swift */,
+				9BF7EEB3284E72BF0060D66B /* FiendInfoView.swift */,
+				9BF7EEB5284E72D10060D66B /* AddTimeManager.swift */,
+				9BF7EEB7284E72EA0060D66B /* CalendarView.swift */,
+				9BF7EEB9284E730B0060D66B /* TakeCheckManager.swift */,
+				9BF7EEBB284E73290060D66B /* PillTakeModel.swift */,
+				9BF7EEBD284E73450060D66B /* pillTimeModel.swift */,
+				9BF7EEBF284E73E60060D66B /* TestView.swift */,
+				9BF7EEC1284E73FE0060D66B /* LoginManager.swift */,
+				9BF7EEC3284E740C0060D66B /* userModel.swift */,
+				9BF7EEC5284E741A0060D66B /* getCurrentTimeManager.swift */,
+				9BF7EEC7284E74270060D66B /* SelectTimeManager.swift */,
+				9BF7EEC9284E74350060D66B /* SearchPillInfoManager.swift */,
+				9BF7EECB284E74480060D66B /* PillDeleteManager.swift */,
 				9BF7EE2D284E6E760060D66B /* Assets.xcassets */,
 				9BF7EE2F284E6E760060D66B /* Preview Content */,
 			);
@@ -137,8 +242,43 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9BF7EEC0284E73E60060D66B /* TestView.swift in Sources */,
+				9BF7EEC2284E73FE0060D66B /* LoginManager.swift in Sources */,
+				9BF7EEC8284E74270060D66B /* SelectTimeManager.swift in Sources */,
+				9BF7EE92284E70200060D66B /* passwordManager.swift in Sources */,
+				9BF7EEA4284E71370060D66B /* PillInfoView.swift in Sources */,
 				9BF7EE2C284E6E750060D66B /* ContentView.swift in Sources */,
+				9BF7EEBA284E730B0060D66B /* TakeCheckManager.swift in Sources */,
+				9BF7EEAE284E71CA0060D66B /* SignupManager.swift in Sources */,
+				9BF7EEB4284E72BF0060D66B /* FiendInfoView.swift in Sources */,
+				9BF7EEBC284E73290060D66B /* PillTakeModel.swift in Sources */,
+				9BF7EE8C284E6FE30060D66B /* FriendManager.swift in Sources */,
+				9BF7EEAA284E71990060D66B /* SignupView.swift in Sources */,
+				9BF7EE90284E700D0060D66B /* ForgotPasswordView.swift in Sources */,
+				9BF7EE96284E70590060D66B /* AddPillManager.swift in Sources */,
+				9BF7EEBE284E73450060D66B /* pillTimeModel.swift in Sources */,
+				9BF7EE86284E6F930060D66B /* FriendInfoManager.swift in Sources */,
+				9BF7EE8A284E6FCF0060D66B /* AddFriendManager.swift in Sources */,
+				9BF7EE8E284E6FF40060D66B /* FriendListModel.swift in Sources */,
+				9BF7EEB6284E72D10060D66B /* AddTimeManager.swift in Sources */,
+				9BF7EEA6284E71730060D66B /* mainView.swift in Sources */,
+				9BF7EEB8284E72EA0060D66B /* CalendarView.swift in Sources */,
+				9BF7EEA2284E71230060D66B /* PillManager.swift in Sources */,
+				9BF7EEC6284E741A0060D66B /* getCurrentTimeManager.swift in Sources */,
+				9BF7EEA0284E71100060D66B /* PillModel.swift in Sources */,
+				9BF7EE88284E6FB80060D66B /* FriendView.swift in Sources */,
+				9BF7EEAC284E71AE0060D66B /* IdCheckManager.swift in Sources */,
+				9BF7EEB2284E72360060D66B /* ProfileView.swift in Sources */,
+				9BF7EE98284E706B0060D66B /* PillSearchView.swift in Sources */,
+				9BF7EE9C284E70AF0060D66B /* SearchBarView.swift in Sources */,
+				9BF7EE94284E70440060D66B /*  AddPillView.swift in Sources */,
+				9BF7EEA8284E71870060D66B /* LoginView.swift in Sources */,
+				9BF7EEC4284E740C0060D66B /* userModel.swift in Sources */,
+				9BF7EECA284E74350060D66B /* SearchPillInfoManager.swift in Sources */,
+				9BF7EEB0284E721D0060D66B /* TabView.swift in Sources */,
+				9BF7EECC284E74480060D66B /* PillDeleteManager.swift in Sources */,
 				9BF7EE2A284E6E750060D66B /* PillMeApp.swift in Sources */,
+				9BF7EE9A284E709C0060D66B /* searchPillInfoModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -267,6 +407,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"PillMe/Preview Content\"";
+				DEVELOPMENT_TEAM = 7G2G9A9P6W;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;

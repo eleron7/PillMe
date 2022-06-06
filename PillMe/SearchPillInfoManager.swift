@@ -1,0 +1,90 @@
+//
+//  DBManager.swift
+//  capstoneDesignProject_pillme
+//
+//  Created by 승헌 on 2022/05/20.
+//
+
+import Foundation
+import SwiftUI
+
+
+class SearchPillInfoManager {
+    static let searchPillInfoManager = SearchPillInfoManager()
+    var resultPillInfo : [serachPillInfoModel] = []
+    var run = true
+    //생성자
+    init() {
+    }
+    
+    //api서버에 약정보를 검색
+    func searchPillInfo(searchText: String) -> [serachPillInfoModel]
+    {
+        var SearchText = searchText
+
+        //쿼리스트링을 swift에서 php 서버로 전송하여 요청
+        let url = "http://"+serverUrl+"/getApiData.php"
+        var components = URLComponents(string: url)
+        //실제 php API에서 Mysql서버로 요청할 쿼리
+        var searchData = URLQueryItem(name: "prdlst_nm", value: SearchText)
+        print(SearchText)
+        components?.queryItems = [searchData]
+    
+        //guard문 --> 해당 url이 존재한다면 그 url을 반환 아니라면 애러문 출력
+        guard let url: URL = components?.url else{
+            print("invalid URL")
+            return resultPillInfo
+        }
+        
+        //위에서 확인한 url로 GET 방식으로 요청
+        var urlRequst: URLRequest = URLRequest(url: url)
+        urlRequst.httpMethod = "POST"
+        URLSession.shared.dataTask(with: urlRequst, completionHandler: { (data, response, error) in
+            //데이터 확인
+            guard let data = data else {
+                print("데이터가 존재하지 않습니다.")
+                return
+            }
+            
+            //오류 확인
+            guard error == nil else {
+                print("오류 : \(String(describing:error))")
+                return
+            }
+            
+            //http 응답을 받음
+            guard let response = response as? HTTPURLResponse else {
+                print("잘못된 응답입니다.")
+                return
+            }
+            
+            //응답 상태
+            guard response.statusCode >= 200 && response.statusCode < 300 else{
+                print("Status Code는 2xx이 되야 합니다. 현재 Status Code는 \(response.statusCode) 입니다.")
+                return
+            }
+            print("약검색 데이터를 성공적으로 다운로드 했습니다!")
+            print(data)
+            let jsonString = String(data: data, encoding: .utf8)
+            print(jsonString)
+                    
+            
+
+            do{
+                self.resultPillInfo = try JSONDecoder().decode( [serachPillInfoModel].self, from: data )
+            } catch {
+                print(error.localizedDescription)
+            }
+            print("check!")
+
+            //while동작을 위한 트리거
+            self.run = false
+
+        }).resume()
+        //로그인 동기처리를 위한 while문
+        while run {}
+        return self.resultPillInfo
+    }
+}
+
+
