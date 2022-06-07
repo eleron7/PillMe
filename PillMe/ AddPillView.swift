@@ -33,7 +33,7 @@ struct AddPillView : View{
     @State var timeString : String = ""
 
     //약먹는 시간(최대 4개)를 저장하는 배열
-    @State private var DateArray = [Date(), Date(), Date(), Date()]
+    @State private var DateArray : [Date] = [Date()]
     @State private var DateStringArray : [String] = []
     @State var moduleNum: String = ""
     @State var pillName: String = ""
@@ -77,10 +77,6 @@ struct AddPillView : View{
                     
                     //복용주기(피커)
                     HStack{
-                        Text(String(DateArray.count))
-                            .font(.system(size:25))
-                            .fontWeight(.bold)
-                            .foregroundColor(Color.white)
                         
                         Text("복용횟수")
                             .font(.system(size:25))
@@ -99,6 +95,22 @@ struct AddPillView : View{
                                 .font(.system(size:25))
                         }
                         .foregroundColor(Color(red:188/255, green: 191/255, blue:240/255))
+                        .onChange(of: selectedTime){ value in
+                            if DateArray.count < selectedTime+1
+                            {
+                                while DateArray.count != selectedTime+1
+                                {
+                                    DateArray.append(Date())
+                                }
+                            }
+                            else if DateArray.count > selectedTime+1
+                            {
+                                while DateArray.count != selectedTime+1
+                                {
+                                    DateArray.popLast()
+                                }
+                            }
+                        }
                         
                         //식전, 식후
                         Menu{
@@ -121,14 +133,14 @@ struct AddPillView : View{
                         .fontWeight(.bold)
                         .foregroundColor(Color.white)
                                         
-                    ForEach(0..<selectedTime+1, id: \.self) { number in
-                        DatePicker("", selection: $DateArray[number], displayedComponents: .hourAndMinute)
+                    ForEach($DateArray, id: \.self) { value in
+                        DatePicker("", selection: value, displayedComponents: .hourAndMinute)
                             .colorInvert()
                             .labelsHidden()
                             .onAppear(perform: {
                                 let dateFormatter = DateFormatter()
                                 dateFormatter.dateFormat = "HH:mm"
-                                DateStringArray.append(dateFormatter.string(from: DateArray[number]))
+                                DateStringArray.append(dateFormatter.string(from: value.wrappedValue))
                             })
                             .onChange(of: DateArray){ value in
                                 DateArray.sort()
@@ -154,6 +166,11 @@ struct AddPillView : View{
                     
                     addPillManager.run = true
                     addPillManager.addPillInfo(modulenum: moduleNum, pillMaster: PillMaster, pillname: pillName, times: String(selectedTime), eat: String(selectedEat))
+                    
+                    //알림수정
+                    var localNotificationManager = LocalNotificationManager.localNotificationManager
+                    localNotificationManager.run = true
+                    localNotificationManager.editNotification(userName: self.PillMaster)
                     
                     presentationMode.wrappedValue.dismiss()
                     shouldShowAlert = true

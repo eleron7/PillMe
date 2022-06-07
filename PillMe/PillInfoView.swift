@@ -48,7 +48,7 @@ struct PillInfoView : View{
     @State var pillEatInt: Int = 0
     
     //약먹는 시간(최대 4개)를 저장하는 배열
-    @State private var DateArray = [Date(), Date(), Date(), Date()]
+    @State private var DateArray : [Date] = []
     @State private var DateStringArray : [String] = []
 
     @State private var shouldShowAlert : Bool = false
@@ -160,7 +160,23 @@ struct PillInfoView : View{
                                 .font(.system(size:25))
                         }
                         .foregroundColor(Color(red:188/255, green: 191/255, blue:240/255))
-            
+                        .onChange(of: pillTimeInt){ value in
+                            if DateArray.count < pillTimeInt+1
+                            {
+                                while DateArray.count != pillTimeInt+1
+                                {
+                                    DateArray.append(Date())
+                                }
+                            }
+                            else if DateArray.count > pillTimeInt+1
+                            {
+                                while DateArray.count != pillTimeInt+1
+                                {
+                                    DateArray.popLast()
+                                }
+                            }
+                        }
+                        
                         //식전, 식후
                         Menu{
                             Picker(selection: $pillEatInt){
@@ -182,15 +198,14 @@ struct PillInfoView : View{
                         .fontWeight(.bold)
                         .foregroundColor(Color.white)
 
-                ForEach(0..<pillTimeInt+1, id: \.self) { number in
-                    DatePicker("", selection: $DateArray[number], displayedComponents: .hourAndMinute)
+                ForEach($DateArray, id: \.self) { value in
+                    DatePicker("", selection: value, displayedComponents: .hourAndMinute)
                         .colorInvert()
                         .labelsHidden()
                         .onAppear(perform: {
                             let dateFormatter = DateFormatter()
                             dateFormatter.dateFormat = "HH:mm"
-                            DateStringArray.append(dateFormatter.string(from: DateArray[number]))
-                            print(DateStringArray[0])
+                            DateStringArray.append(dateFormatter.string(from: value.wrappedValue))
                         })
                         .onChange(of: DateArray){ value in
                             DateArray.sort()
@@ -223,6 +238,12 @@ struct PillInfoView : View{
                         
                         addPillManager.run = true
                         addPillManager.addPillInfo(modulenum: moduleNum, pillMaster: pillMaster, pillname: pillName, times: String(pillTimeInt), eat: String(pillEatInt))
+                        
+                        //알림수정
+                        var localNotificationManager = LocalNotificationManager.localNotificationManager
+                        localNotificationManager.run = true
+                        localNotificationManager.editNotification(userName: self.pillMaster)
+                        
                         presentationMode.wrappedValue.dismiss()
                         shouldShowAlert = true
                         popupText = "변경 완료!"
@@ -245,6 +266,12 @@ struct PillInfoView : View{
                         var pillDeleteManager = PillDelteManager.pillDeleteManager
                         pillDeleteManager.run = true
                         pillDeleteManager.deletePillInfo(modulenum: moduleNum)
+                        
+                        //알림수정
+                        var localNotificationManager = LocalNotificationManager.localNotificationManager
+                        localNotificationManager.run = true
+                        localNotificationManager.editNotification(userName: self.pillMaster)
+                        
                         presentationMode.wrappedValue.dismiss()
                         shouldShowAlert = true
                         popupText = "삭제 완료!"
@@ -283,10 +310,8 @@ struct PillInfoView : View{
             selectTimeManager.run = true
             var selectTimeResult = selectTimeManager.getPillTime(moduleNum: self.moduleNum)
             
-            var i = 0
             for value in selectTimeResult{
-                self.DateArray[i] = getStringToDate(strDate: value.EatTime ?? "", format: "HH:mm")
-                i = i+1
+                self.DateArray.append(getStringToDate(strDate: value.EatTime ?? "", format: "HH:mm"))
             }
         })
         .alert(isPresented: $shouldShowAlert, content: {

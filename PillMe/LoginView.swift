@@ -88,13 +88,18 @@ struct LoginView: View{
                 var LoginResult : Bool = false
                 loginManager.run = true//비동기처리 트리거
                 LoginResult = loginManager.login(userID: self.ID, userPW: self.PW)
-                NAME = loginManager.loginName
+                self.NAME = loginManager.loginName
                 
                 if LoginResult
                 {
                     loginOK = true
                     UserDefaults.standard.set(self.ID, forKey: "ID")
                     UserDefaults.standard.set(self.PW, forKey: "PW")
+                    
+                    //로그인이 성공하면 해당사용자의 알림을 갱신한다.
+                    var localNotificationManager = LocalNotificationManager.localNotificationManager
+                    localNotificationManager.run = true
+                    localNotificationManager.editNotification(userName: self.ID)
                 }
                 else
                 {

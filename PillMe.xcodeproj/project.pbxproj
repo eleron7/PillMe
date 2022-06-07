@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9B48BB4B284F6A1700C23F1C /* Notification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B48BB4A284F6A1700C23F1C /* Notification.swift */; };
+		9B48BB4D284F814700C23F1C /* LocalNotificationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B48BB4C284F814700C23F1C /* LocalNotificationManager.swift */; };
 		9BF7EE2A284E6E750060D66B /* PillMeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BF7EE29284E6E750060D66B /* PillMeApp.swift */; };
 		9BF7EE2C284E6E750060D66B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BF7EE2B284E6E750060D66B /* ContentView.swift */; };
 		9BF7EE2E284E6E760060D66B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9BF7EE2D284E6E760060D66B /* Assets.xcassets */; };
@@ -49,6 +51,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9B48BB4A284F6A1700C23F1C /* Notification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notification.swift; sourceTree = "<group>"; };
+		9B48BB4C284F814700C23F1C /* LocalNotificationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalNotificationManager.swift; sourceTree = "<group>"; };
 		9BF7EE26284E6E750060D66B /* PillMe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PillMe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9BF7EE29284E6E750060D66B /* PillMeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PillMeApp.swift; sourceTree = "<group>"; };
 		9BF7EE2B284E6E750060D66B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -130,6 +134,8 @@
 				9BF7EE8F284E700D0060D66B /* ForgotPasswordView.swift */,
 				9BF7EE91284E70200060D66B /* passwordManager.swift */,
 				9BF7EE93284E70440060D66B /*  AddPillView.swift */,
+				9B48BB4A284F6A1700C23F1C /* Notification.swift */,
+				9B48BB4C284F814700C23F1C /* LocalNotificationManager.swift */,
 				9BF7EE95284E70590060D66B /* AddPillManager.swift */,
 				9BF7EE97284E706B0060D66B /* PillSearchView.swift */,
 				9BF7EE99284E709C0060D66B /* searchPillInfoModel.swift */,
@@ -248,12 +254,14 @@
 				9BF7EE92284E70200060D66B /* passwordManager.swift in Sources */,
 				9BF7EEA4284E71370060D66B /* PillInfoView.swift in Sources */,
 				9BF7EE2C284E6E750060D66B /* ContentView.swift in Sources */,
+				9B48BB4D284F814700C23F1C /* LocalNotificationManager.swift in Sources */,
 				9BF7EEBA284E730B0060D66B /* TakeCheckManager.swift in Sources */,
 				9BF7EEAE284E71CA0060D66B /* SignupManager.swift in Sources */,
 				9BF7EEB4284E72BF0060D66B /* FiendInfoView.swift in Sources */,
 				9BF7EEBC284E73290060D66B /* PillTakeModel.swift in Sources */,
 				9BF7EE8C284E6FE30060D66B /* FriendManager.swift in Sources */,
 				9BF7EEAA284E71990060D66B /* SignupView.swift in Sources */,
+				9B48BB4B284F6A1700C23F1C /* Notification.swift in Sources */,
 				9BF7EE90284E700D0060D66B /* ForgotPasswordView.swift in Sources */,
 				9BF7EE96284E70590060D66B /* AddPillManager.swift in Sources */,
 				9BF7EEBE284E73450060D66B /* pillTimeModel.swift in Sources */,

@@ -21,7 +21,7 @@ class TakeCheckManager {
         var query = pillMaster
         print(query)
         //쿼리스트링을 swift에서 php 서버로 전송하여 요청
-        let url = "http://"+serverUrl+"/pillmeGetDataA.php"
+        let url = "http://"+serverUrl+"/pillmeEatedData.php"
         var components = URLComponents(string: url)
         //실제 php API에서 Mysql서버로 요청할 쿼리
         var myQuery = URLQueryItem(name: "myQuery", value: query)

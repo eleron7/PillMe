@@ -7,7 +7,7 @@
 // to do something
 import SwiftUI
 
-public let serverUrl = "192.168.0.105:80"
+public let serverUrl = "http://34.64.165.0:8080"
 
 struct ContentView: View {
     @State
