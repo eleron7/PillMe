@@ -36,6 +36,7 @@ struct PillInfoView : View{
     @State var moduleNum: String = ""
     @State var pillMaster: String = ""
     @State var pillName: String = ""
+    @State var pillLength: String = ""
     @State var pillAmount: String = ""
     @State var pillTime: String = ""
     @State var pillTimeArray: [String] = []
@@ -43,7 +44,7 @@ struct PillInfoView : View{
     
     @State var timeString : String = ""
     
-    @State var pillAmountInt: Int = 0
+    @State var pillAmountInt: Double = 0
     @State var pillTimeInt: Int = 0//복용 횟수
     @State var pillEatInt: Int = 0
     
@@ -74,7 +75,7 @@ struct PillInfoView : View{
                                 .foregroundColor(Color.white)
                             )
                         
-                        if pillAmountInt >= 75
+                        if pillAmountInt <= 3.5
                         {
                             Image(systemName: "battery.100")
                                 .font(.system(size: 70))
@@ -82,7 +83,7 @@ struct PillInfoView : View{
                                 .rotationEffect(.degrees(270))
                         }
 
-                        else if pillAmountInt >= 50
+                        else if pillAmountInt <= 4.5
                         {
                             Image(systemName: "battery.75")
                                 .font(.system(size: 70))
@@ -90,7 +91,7 @@ struct PillInfoView : View{
                                 .rotationEffect(.degrees(270))
                         }
                         
-                        else if pillAmountInt >= 25
+                        else if pillAmountInt <= 5.5
                         {
                             Image(systemName: "battery.50")
                                 .font(.system(size: 70))
@@ -98,7 +99,7 @@ struct PillInfoView : View{
                                 .rotationEffect(.degrees(270))
                         }
                         
-                        else if pillAmountInt != 0
+                        else if pillAmountInt <= 6.5
                         {
                             Image(systemName: "battery.25")
                                 .font(.system(size: 70))
@@ -237,7 +238,7 @@ struct PillInfoView : View{
                         }
                         
                         addPillManager.run = true
-                        addPillManager.addPillInfo(modulenum: moduleNum, pillMaster: pillMaster, pillname: pillName, times: String(pillTimeInt), eat: String(pillEatInt))
+                        addPillManager.addPillInfo(modulenum: moduleNum, pillMaster: pillMaster, pillname: pillName, pillLength: pillLength, times: String(pillTimeInt), eat: String(pillEatInt))
                         
                         //알림수정
                         var localNotificationManager = LocalNotificationManager.localNotificationManager
@@ -296,13 +297,14 @@ struct PillInfoView : View{
             self.moduleNum = self.pillData.ModuleNum ?? "" //약통 묘듈
             self.pillMaster = self.pillData.PillMaster ?? "" //약통 주인
             self.pillName = self.pillData.PillName ?? "" //약통 이름
+            self.pillLength = self.pillData.PillLength ?? ""//약통 길이
             self.pillAmount = self.pillData.PillAmount ?? "" //약통 잔량
             self.pillTime = self.pillData.PillTime ?? "" //하루에 몇번
             self.pillTimeArray = self.pillTime.components(separatedBy: ",")
             self.pillEat = self.pillData.PillEat ?? "" //식전 식후
             
             //각 양 횟수는 수치로 피커뷰로 나타냄
-            self.pillAmountInt = Int(self.pillAmount)!
+            self.pillAmountInt = 0.1 * Double(self.pillAmount)!
             self.pillTimeInt = Int(self.pillTime)!
             self.pillEatInt = Int(self.pillEat)!
 

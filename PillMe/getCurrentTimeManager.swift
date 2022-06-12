@@ -25,7 +25,7 @@ class getCurrentTimeManager {
         var formatter = DateFormatter()
         formatter.dateFormat = "HH:mm"
         var currentTime = formatter.string(from: Date())
-        var query = "SELECT * FROM PillTime WHERE EatTime >= '"+currentTime+"' AND PillMaster = '"+pillMaster+"' ORDER BY EatTime ASC"
+        var query = "SELECT * FROM PillMe.PillTime as A WHERE (TIME_TO_SEC('"+currentTime+"') - TIME_TO_SEC(EatTime))/60 <= 30 AND PillMaster = '"+pillMaster+"'  AND NOT EXISTS ( SELECT *, DATE_FORMAT(PillTakeTime, '%H:%i'), (TIME_TO_SEC(DATE_FORMAT(PillTakeTime, '%H:%i')) - TIME_TO_SEC(A.EatTime))/60 FROM PillMe.PillTake WHERE DATE_FORMAT(PillTakeTime, '%Y-%m-%d') = DATE_FORMAT(now(), '%Y-%m-%d') AND ModuleNum = A.ModuleNum AND (TIME_TO_SEC(DATE_FORMAT(PillTakeTime, '%H:%i')) - TIME_TO_SEC(A.EatTime))/60 <= 30 AND (TIME_TO_SEC(DATE_FORMAT(PillTakeTime, '%H:%i')) - TIME_TO_SEC(A.EatTime))/60 >= 0) ORDER BY EatTime ASC"
 
         //쿼리스트링을 swift에서 php 서버로 전송하여 요청
         let url = "http://"+serverUrl+"/pillmeGetData.php"

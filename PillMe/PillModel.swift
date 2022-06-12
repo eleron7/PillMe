@@ -11,6 +11,7 @@ public class pillModel: Codable, Identifiable{
     public var ModuleNum: String? = ""
     public var PillMaster: String? = ""
     public var PillName: String? = ""
+    public var PillLength: String? = ""
     public var PillAmount: String? = ""
     public var PillTime: String? = ""
     public var PillEat: String? = ""

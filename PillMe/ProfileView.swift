@@ -26,7 +26,8 @@ struct ProfileView : View{
     @State var nextEatTime : String = ""//다음약 시간
     var userImg : String = ""//프로필 이미지
     @State var timeResult : [pillTimeModel] = []// 시간 결과값
-
+    @State var takeResult : [takeListModel] = []// 복용 결과값
+    
     var body : some View{
         HStack{
             /*1.사용자 정보*/
@@ -63,12 +64,17 @@ struct ProfileView : View{
             })
         }
         .onAppear(perform: {
+            var isOn = false
             var getCurrentTime = getCurrentTimeManager.currentTimeManager
             getCurrentTime.run = true
             self.timeResult = getCurrentTime.getCurrentTime(pillMaster: self.userID)
             
+            
+ 
             self.nextEatName = self.timeResult.first?.PillName ?? ""
             self.nextEatTime = self.timeResult.first?.EatTime ?? ""
+            
+            
         })
         .padding(.all)
         .frame(height: 150, alignment: .center)

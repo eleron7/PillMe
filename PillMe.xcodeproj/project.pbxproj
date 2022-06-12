@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		9B48BB4B284F6A1700C23F1C /* Notification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B48BB4A284F6A1700C23F1C /* Notification.swift */; };
 		9B48BB4D284F814700C23F1C /* LocalNotificationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B48BB4C284F814700C23F1C /* LocalNotificationManager.swift */; };
+		9B50BEEF2855452500C72807 /* TakeListManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B50BEEE2855452500C72807 /* TakeListManager.swift */; };
+		9B50BEF12855453200C72807 /* TakeListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B50BEF02855453200C72807 /* TakeListModel.swift */; };
 		9BF7EE2A284E6E750060D66B /* PillMeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BF7EE29284E6E750060D66B /* PillMeApp.swift */; };
 		9BF7EE2C284E6E750060D66B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BF7EE2B284E6E750060D66B /* ContentView.swift */; };
 		9BF7EE2E284E6E760060D66B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9BF7EE2D284E6E760060D66B /* Assets.xcassets */; };
@@ -53,6 +55,8 @@
 /* Begin PBXFileReference section */
 		9B48BB4A284F6A1700C23F1C /* Notification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notification.swift; sourceTree = "<group>"; };
 		9B48BB4C284F814700C23F1C /* LocalNotificationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalNotificationManager.swift; sourceTree = "<group>"; };
+		9B50BEEE2855452500C72807 /* TakeListManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TakeListManager.swift; sourceTree = "<group>"; };
+		9B50BEF02855453200C72807 /* TakeListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TakeListModel.swift; sourceTree = "<group>"; };
 		9BF7EE26284E6E750060D66B /* PillMe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PillMe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9BF7EE29284E6E750060D66B /* PillMeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PillMeApp.swift; sourceTree = "<group>"; };
 		9BF7EE2B284E6E750060D66B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -151,6 +155,8 @@
 				9BF7EEAD284E71CA0060D66B /* SignupManager.swift */,
 				9BF7EEAF284E721D0060D66B /* TabView.swift */,
 				9BF7EEB1284E72360060D66B /* ProfileView.swift */,
+				9B50BEEE2855452500C72807 /* TakeListManager.swift */,
+				9B50BEF02855453200C72807 /* TakeListModel.swift */,
 				9BF7EEB3284E72BF0060D66B /* FiendInfoView.swift */,
 				9BF7EEB5284E72D10060D66B /* AddTimeManager.swift */,
 				9BF7EEB7284E72EA0060D66B /* CalendarView.swift */,
@@ -250,6 +256,7 @@
 			files = (
 				9BF7EEC0284E73E60060D66B /* TestView.swift in Sources */,
 				9BF7EEC2284E73FE0060D66B /* LoginManager.swift in Sources */,
+				9B50BEF12855453200C72807 /* TakeListModel.swift in Sources */,
 				9BF7EEC8284E74270060D66B /* SelectTimeManager.swift in Sources */,
 				9BF7EE92284E70200060D66B /* passwordManager.swift in Sources */,
 				9BF7EEA4284E71370060D66B /* PillInfoView.swift in Sources */,
@@ -276,6 +283,7 @@
 				9BF7EEA0284E71100060D66B /* PillModel.swift in Sources */,
 				9BF7EE88284E6FB80060D66B /* FriendView.swift in Sources */,
 				9BF7EEAC284E71AE0060D66B /* IdCheckManager.swift in Sources */,
+				9B50BEEF2855452500C72807 /* TakeListManager.swift in Sources */,
 				9BF7EEB2284E72360060D66B /* ProfileView.swift in Sources */,
 				9BF7EE98284E706B0060D66B /* PillSearchView.swift in Sources */,
 				9BF7EE9C284E70AF0060D66B /* SearchBarView.swift in Sources */,

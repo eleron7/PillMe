@@ -1,18 +1,25 @@
+//
+//  DBManager.swift
+//  capstoneDesignProject_pillme
+//
+//  Created by 승헌 on 2022/05/20.
+//
+
 import Foundation
 import SwiftUI
 
-class AddPillManager {
-    static let addPillManager = AddPillManager()
+class TakeListManager {
+    static let takeListManager = TakeListManager()
+    var results : [takeListModel] = []
     var run = true
     //생성자
-    init() {
-    }
     
-    //약 정보를 추가하는 함수
-    func addPillInfo(modulenum: String, pillMaster: String ,pillname: String, pillLength:String, times: String, eat: String ){
-        var query = "INSERT INTO PillList values('"+modulenum+"', '"+pillMaster+"', '"+pillname+"', '"+pillLength+"', '0', '"+times+"', '"+eat+"')"
+    //login 함수
+    func getTakeList() -> [takeListModel]
+    {
+        var query = "SELECT ModuleNum, DATE_FORMAT(PillTakeTime, '%H:%I') as DifTime FROM PillMe.PillTake;"
         //쿼리스트링을 swift에서 php 서버로 전송하여 요청
-        let url = "http://"+serverUrl+"/pillmeApplyData.php"
+        let url = "http://"+serverUrl+"/pillmeGetData.php"
         var components = URLComponents(string: url)
         //실제 php API에서 Mysql서버로 요청할 쿼리
         var myQuery = URLQueryItem(name: "myQuery", value: query)
@@ -21,7 +28,7 @@ class AddPillManager {
         //guard문 --> 해당 url이 존재한다면 그 url을 반환 아니라면 애러문 출력
         guard let url: URL = components?.url else{
             print("invalid URL")
-            return
+            return results
         }
         
         //위에서 확인한 url로 GET 방식으로 요청
@@ -51,16 +58,28 @@ class AddPillManager {
                 print("Status Code는 2xx이 되야 합니다. 현재 Status Code는 \(response.statusCode) 입니다.")
                 return
             }
+            print("유저 데이터를 성공적으로 다운로드 했습니다!")
+            print(data)
+            let jsonString = String(data: data, encoding: .utf8)
+            print(jsonString)
+                    
+            do{
+                print("running")
+                self.results = try JSONDecoder().decode( [takeListModel].self, from: data )
+
+            } catch {
+                print(error.localizedDescription)
+            }
             
-            let responseString = String(data: data, encoding: .utf8)
-            print(responseString)
-            
+            //while동작을 위한 트리거
             self.run = false
 
         }).resume()
-        //동기처리를 위한 while문
+        //로그인 동기처리를 위한 while문
         while run {
             
         }
+        
+        return self.results
     }
 }

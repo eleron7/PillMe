@@ -37,7 +37,8 @@ struct AddPillView : View{
     @State private var DateStringArray : [String] = []
     @State var moduleNum: String = ""
     @State var pillName: String = ""
-
+    @State var pillLength: String = ""
+    
     @State private var shouldShowAlert : Bool = false
     @State private var popupText : String = ""
     @Environment(\.presentationMode) var presentationMode
@@ -74,10 +75,17 @@ struct AddPillView : View{
                         .cornerRadius(15)
                         .keyboardType(.default)
                         .padding()
-                    
+                        
+                    //약통길이
+                    TextField(" Bottle Length", text: $pillLength)
+                        .frame(width: .infinity, height: 50)
+                        .background(Color.white)
+                        .cornerRadius(15)
+                        .keyboardType(.default)
+                        .padding()
+                
                     //복용주기(피커)
                     HStack{
-                        
                         Text("복용횟수")
                             .font(.system(size:25))
                             .fontWeight(.bold)
@@ -165,7 +173,7 @@ struct AddPillView : View{
                     }
                     
                     addPillManager.run = true
-                    addPillManager.addPillInfo(modulenum: moduleNum, pillMaster: PillMaster, pillname: pillName, times: String(selectedTime), eat: String(selectedEat))
+                    addPillManager.addPillInfo(modulenum: moduleNum, pillMaster: PillMaster, pillname: pillName, pillLength: pillLength, times: String(selectedTime), eat: String(selectedEat))
                     
                     //알림수정
                     var localNotificationManager = LocalNotificationManager.localNotificationManager

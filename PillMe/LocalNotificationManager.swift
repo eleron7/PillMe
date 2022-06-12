@@ -36,7 +36,7 @@ class NotificationManager{
         content.subtitle = identi//약 이름과 약먹을 시간
         
         content.sound = .default
-        content.badge = 1
+        content.badge = 0
         
         
         
