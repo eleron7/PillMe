@@ -44,9 +44,11 @@ struct PillInfoView : View{
     
     @State var timeString : String = ""
     
+    @State var pillLengthInt: Double = 0
     @State var pillAmountInt: Double = 0
     @State var pillTimeInt: Int = 0//복용 횟수
     @State var pillEatInt: Int = 0
+    let bottleNeck = 3.5
     
     //약먹는 시간(최대 4개)를 저장하는 배열
     @State private var DateArray : [Date] = []
@@ -75,7 +77,7 @@ struct PillInfoView : View{
                                 .foregroundColor(Color.white)
                             )
                         
-                        if pillAmountInt <= 3.5
+                        if pillAmountInt <= bottleNeck
                         {
                             Image(systemName: "battery.100")
                                 .font(.system(size: 70))
@@ -83,7 +85,7 @@ struct PillInfoView : View{
                                 .rotationEffect(.degrees(270))
                         }
 
-                        else if pillAmountInt <= 4.5
+                        else if pillAmountInt <=  bottleNeck + ((self.pillLengthInt - bottleNeck) * 0.25)
                         {
                             Image(systemName: "battery.75")
                                 .font(.system(size: 70))
@@ -91,7 +93,7 @@ struct PillInfoView : View{
                                 .rotationEffect(.degrees(270))
                         }
                         
-                        else if pillAmountInt <= 5.5
+                        else if pillAmountInt <= bottleNeck + ((self.pillLengthInt  - bottleNeck) * 0.5)
                         {
                             Image(systemName: "battery.50")
                                 .font(.system(size: 70))
@@ -99,7 +101,7 @@ struct PillInfoView : View{
                                 .rotationEffect(.degrees(270))
                         }
                         
-                        else if pillAmountInt <= 6.5
+                        else if pillAmountInt <= bottleNeck + ((self.pillLengthInt  - bottleNeck) * 0.75)
                         {
                             Image(systemName: "battery.25")
                                 .font(.system(size: 70))
@@ -304,6 +306,7 @@ struct PillInfoView : View{
             self.pillEat = self.pillData.PillEat ?? "" //식전 식후
             
             //각 양 횟수는 수치로 피커뷰로 나타냄
+            self.pillLengthInt = Double(self.pillLength)!
             self.pillAmountInt = 0.1 * Double(self.pillAmount)!
             self.pillTimeInt = Int(self.pillTime)!
             self.pillEatInt = Int(self.pillEat)!
