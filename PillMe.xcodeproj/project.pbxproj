@@ -11,6 +11,7 @@
 		9B48BB4D284F814700C23F1C /* LocalNotificationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B48BB4C284F814700C23F1C /* LocalNotificationManager.swift */; };
 		9B50BEEF2855452500C72807 /* TakeListManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B50BEEE2855452500C72807 /* TakeListManager.swift */; };
 		9B50BEF12855453200C72807 /* TakeListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B50BEF02855453200C72807 /* TakeListModel.swift */; };
+		9B876D6428586DAA0033F744 /* PillTakeTimeDeleteManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B876D6328586DAA0033F744 /* PillTakeTimeDeleteManager.swift */; };
 		9BF7EE2A284E6E750060D66B /* PillMeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BF7EE29284E6E750060D66B /* PillMeApp.swift */; };
 		9BF7EE2C284E6E750060D66B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BF7EE2B284E6E750060D66B /* ContentView.swift */; };
 		9BF7EE2E284E6E760060D66B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9BF7EE2D284E6E760060D66B /* Assets.xcassets */; };
@@ -57,6 +58,7 @@
 		9B48BB4C284F814700C23F1C /* LocalNotificationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalNotificationManager.swift; sourceTree = "<group>"; };
 		9B50BEEE2855452500C72807 /* TakeListManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TakeListManager.swift; sourceTree = "<group>"; };
 		9B50BEF02855453200C72807 /* TakeListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TakeListModel.swift; sourceTree = "<group>"; };
+		9B876D6328586DAA0033F744 /* PillTakeTimeDeleteManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PillTakeTimeDeleteManager.swift; sourceTree = "<group>"; };
 		9BF7EE26284E6E750060D66B /* PillMe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PillMe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9BF7EE29284E6E750060D66B /* PillMeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PillMeApp.swift; sourceTree = "<group>"; };
 		9BF7EE2B284E6E750060D66B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -170,6 +172,7 @@
 				9BF7EEC7284E74270060D66B /* SelectTimeManager.swift */,
 				9BF7EEC9284E74350060D66B /* SearchPillInfoManager.swift */,
 				9BF7EECB284E74480060D66B /* PillDeleteManager.swift */,
+				9B876D6328586DAA0033F744 /* PillTakeTimeDeleteManager.swift */,
 				9BF7EE2D284E6E760060D66B /* Assets.xcassets */,
 				9BF7EE2F284E6E760060D66B /* Preview Content */,
 			);
@@ -259,6 +262,7 @@
 				9B50BEF12855453200C72807 /* TakeListModel.swift in Sources */,
 				9BF7EEC8284E74270060D66B /* SelectTimeManager.swift in Sources */,
 				9BF7EE92284E70200060D66B /* passwordManager.swift in Sources */,
+				9B876D6428586DAA0033F744 /* PillTakeTimeDeleteManager.swift in Sources */,
 				9BF7EEA4284E71370060D66B /* PillInfoView.swift in Sources */,
 				9BF7EE2C284E6E750060D66B /* ContentView.swift in Sources */,
 				9B48BB4D284F814700C23F1C /* LocalNotificationManager.swift in Sources */,
@@ -351,7 +355,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -405,7 +409,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;

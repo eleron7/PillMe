@@ -26,7 +26,7 @@ func getDateToString(date:Date, format:String) -> String {
 
 struct PillInfoView : View{
     var times = ["한번", "두번", "세번", "네번"]//복용 옵션1
-    var eats = ["식전", "식후"]//복용 옵션2
+    var eats = ["식사전", "식사후"]//복용 옵션2
     
     @State var pillData : pillModel//각 약의 정보를 받는 배열
     
@@ -77,44 +77,42 @@ struct PillInfoView : View{
                                 .foregroundColor(Color.white)
                             )
                         
-                        if pillAmountInt <= bottleNeck
+                        if pillLengthInt - pillAmountInt <= 1
                         {
-                            Image(systemName: "battery.100")
-                                .font(.system(size: 70))
-                                .foregroundColor(Color.green)
-                                .rotationEffect(.degrees(270))
-                        }
-
-                        else if pillAmountInt <=  bottleNeck + ((self.pillLengthInt - bottleNeck) * 0.25)
-                        {
-                            Image(systemName: "battery.75")
-                                .font(.system(size: 70))
-                                .foregroundColor(Color.yellow)
-                                .rotationEffect(.degrees(270))
-                        }
-                        
-                        else if pillAmountInt <= bottleNeck + ((self.pillLengthInt  - bottleNeck) * 0.5)
-                        {
-                            Image(systemName: "battery.50")
-                                .font(.system(size: 70))
-                                .foregroundColor(Color.orange)
-                                .rotationEffect(.degrees(270))
-                        }
-                        
-                        else if pillAmountInt <= bottleNeck + ((self.pillLengthInt  - bottleNeck) * 0.75)
-                        {
-                            Image(systemName: "battery.25")
+                            Image(systemName: "capsule.portrait.bottomhalf.filled")
                                 .font(.system(size: 70))
                                 .foregroundColor(Color.red)
-                                .rotationEffect(.degrees(270))
                         }
-                        
+
+//                        else if pillAmountInt <=  bottleNeck + ((self.pillLengthInt - bottleNeck) * 0.25)
+//                        {
+//                            Image(systemName: "battery.75")
+//                                .font(.system(size: 70))
+//                                .foregroundColor(Color.yellow)
+//                                .rotationEffect(.degrees(270))
+//                        }
+//
+//                        else if pillAmountInt <= bottleNeck + ((self.pillLengthInt  - bottleNeck) * 0.5)
+//                        {
+//                            Image(systemName: "battery.50")
+//                                .font(.system(size: 70))
+//                                .foregroundColor(Color.orange)
+//                                .rotationEffect(.degrees(270))
+//                        }
+//
+//                        else if pillAmountInt <= bottleNeck + ((self.pillLengthInt  - bottleNeck) * 0.75)
+//                        {
+//                            Image(systemName: "battery.25")
+//                                .font(.system(size: 70))
+//                                .foregroundColor(Color.red)
+//                                .rotationEffect(.degrees(270))
+//                        }
+//
                         else
                         {
-                            Image(systemName: "battery.0")
+                            Image(systemName: "capsule.portrait.bottomhalf.filled")
                                 .font(.system(size: 70))
-                                .foregroundColor(Color.gray)
-                                .rotationEffect(.degrees(270))
+                                .foregroundColor(Color.green)
                         }
                     }
                     
@@ -180,6 +178,11 @@ struct PillInfoView : View{
                             }
                         }
                         
+                        Text("|")
+                            .font(.system(size:25))
+                            .fontWeight(.bold)
+                            .foregroundColor(Color(red:188/255, green: 191/255, blue:240/255))
+                        
                         //식전, 식후
                         Menu{
                             Picker(selection: $pillEatInt){
@@ -222,6 +225,12 @@ struct PillInfoView : View{
                         var deletePillInfo = PillDelteManager.pillDeleteManager
                         deletePillInfo.run = true
                         deletePillInfo.deletePillInfo(modulenum: moduleNum)
+                        
+                        //약 복용기록도 삭제
+                        var deleteTakeInfo = PillTakeTimeDeleteManager.pillTakeTimeDeleteManager
+                        deleteTakeInfo.run = true
+                        deleteTakeInfo.deleteTakeInfo(Modulenum: moduleNum)
+                        
                         
                         //삽입
                         var addPillManager = AddPillManager.addPillManager
@@ -269,6 +278,11 @@ struct PillInfoView : View{
                         var pillDeleteManager = PillDelteManager.pillDeleteManager
                         pillDeleteManager.run = true
                         pillDeleteManager.deletePillInfo(modulenum: moduleNum)
+                        
+                        //약 복용기록도 삭제
+                        var deleteTakeInfo = PillTakeTimeDeleteManager.pillTakeTimeDeleteManager
+                        deleteTakeInfo.run = true
+                        deleteTakeInfo.deleteTakeInfo(Modulenum: moduleNum)
                         
                         //알림수정
                         var localNotificationManager = LocalNotificationManager.localNotificationManager

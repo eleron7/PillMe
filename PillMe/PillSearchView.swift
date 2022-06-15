@@ -35,10 +35,10 @@ struct PillSearchView: View{
                     .padding(EdgeInsets(top: 10, leading: 0, bottom: 5, trailing: 0))
                 /*2.약검색*/
                 Button(action:{
+                    self.pageNum = 0
                     var searchPillInfoManager = SearchPillInfoManager.searchPillInfoManager
                     searchPillInfoManager.run = true
                     self.resultPillInfo = searchPillInfoManager.searchPillInfo(searchText: searchText)
-                    
                     if self.resultPillInfo.count != 0
                     {
                         self.PRDLST_NM = self.resultPillInfo[self.pageNum].PRDLST_NM ?? ""
