@@ -35,7 +35,8 @@
 <img width="362" alt="image" src="https://github.com/eleron7/PillMe/assets/78886646/ada93f64-649e-4c6e-ba2c-bd0d5af810ac">
 <img width="352" alt="image" src="https://github.com/eleron7/PillMe/assets/78886646/4e38f853-399f-495f-bd05-8f4015acf902">
 
-
+## WEB개발 저장소 url
+https://github.com/ischar/pillMe2
 
 ## 시연영상
 https://www.youtube.com/watch?v=UR8WXGhNJe8&ab_channel=%EC%B0%A8%EC%9E%AC%ED%98%B8
