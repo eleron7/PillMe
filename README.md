@@ -17,7 +17,6 @@
 
 ## UI
 ### [APP]
-<hr>
 <img width="156" alt="image" src="https://github.com/eleron7/PillMe/assets/78886646/3defa9c2-6ec1-415b-8fc6-17d21668d3ce">
 <img width="156" alt="image" src="https://github.com/eleron7/PillMe/assets/78886646/4ebb36fe-7647-464d-9d37-c5f6592d053e">
 <img width="160" alt="image" src="https://github.com/eleron7/PillMe/assets/78886646/ca85d387-294e-470f-84ed-608ea03911bd">
