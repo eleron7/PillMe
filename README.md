@@ -35,6 +35,9 @@
 <img width="362" alt="image" src="https://github.com/eleron7/PillMe/assets/78886646/ada93f64-649e-4c6e-ba2c-bd0d5af810ac">
 <img width="352" alt="image" src="https://github.com/eleron7/PillMe/assets/78886646/4e38f853-399f-495f-bd05-8f4015acf902">
 
+## 이전 커밋로그
+https://github.com/eleron7/capstoneDesignProject_pillme
+
 ## WEB개발 저장소 url
 https://github.com/ischar/pillMe2
 
