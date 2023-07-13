@@ -1,16 +1,12 @@
 # PillMe
-<hr>
 
 ## 소개
-<hr>
 필케이스 내부의 아두이노 모듈을 통해 약품 복용 및 잔량관리에 대한 알림을 주고 피호보자의 섭취현황 및 의약품 정보 조회 가능
 
 ## 서비스 구조
-<hr>
 <img width="578" alt="서비스 구조" src="https://github.com/eleron7/PillMe/assets/78886646/7b31ad5b-e9bf-49ed-867c-44be1dcec867">
 
 ## 기능
-<hr>
 <ul>
   <li>필케이스 내부 약 잔량 체크</li>
   <li>약 복용 기록</li>
@@ -20,7 +16,6 @@
 </ul>
 
 ## UI
-<hr>
 ### [APP]
 <hr>
 <img width="156" alt="image" src="https://github.com/eleron7/PillMe/assets/78886646/3defa9c2-6ec1-415b-8fc6-17d21668d3ce">
@@ -34,7 +29,6 @@
 <img width="165" alt="image" src="https://github.com/eleron7/PillMe/assets/78886646/11e8aef3-281d-4590-ac94-4c1a2eefd8af">
 
 ### [WEB]
-<hr>
 <img width="367" alt="image" src="https://github.com/eleron7/PillMe/assets/78886646/19e28fe7-9d1d-4d62-9150-cb036bf12e68">
 <img width="369" alt="image" src="https://github.com/eleron7/PillMe/assets/78886646/0c61363f-006f-4ec9-ade4-25ac3e4c1694">
 <img width="363" alt="image" src="https://github.com/eleron7/PillMe/assets/78886646/110ad691-abad-4bb7-87d2-f1dee91e82b7">
@@ -45,5 +39,4 @@
 
 
 ## 시연영상
-<hr>
 https://www.youtube.com/watch?v=UR8WXGhNJe8&ab_channel=%EC%B0%A8%EC%9E%AC%ED%98%B8
